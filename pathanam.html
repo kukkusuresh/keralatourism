@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Pathanamthitta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="#">
+<style>
+.mySlides {display:none;}
+h2{
+    color: rgb(78, 7, 95);
+   text-shadow: tomato;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+p{
+  color: aliceblue;
+  size: 30px;
+  align-content: flex-end;
+  text-align: justify;
+}
+
+</style>
+<div class="w3-container">
+  <h2 >Explore the beauty of Pathanamthitta</h2>
+ <body background="images/tour6.jpg">
+</div>
+
+<div class="w3-content w3-section" style="max-width:800px">
+  <p> Pathanamthitta district is known as the Headquarters of Pilgrimage Tourism, of the Kerala State. Situated near the Western Ghats and bordered by the hills, Pathanamthitta district is a treat to eyes with its vast unending stretches of forests, rivers and rural landscapes. Blessed by nature, the district is famous for its scenic beauty, fairs and festivals</p>
+  <img class="mySlides w3-animate-top" src="images/valkannadi.jpg" style="width:100%" >
+  <img class="mySlides w3-animate-bottom" src="images/aranmula.jpg" style="width:100%">
+      <img class="mySlides w3-animate-top" src="images/gavi1.jpg" style="width:100%">
+  <img class="mySlides w3-animate-bottom" src="images/muralpainting.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2500);    
+}
+</script>
+
+</body>
+</html>

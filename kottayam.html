@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #21d4bd50;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align:center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+ h3{
+   font-size: 20px;
+   color: mediumblue;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+ } 
+button{
+  float: inline-end;
+  
+  color: darkgreen;
+  padding-bottom: 20px;
+}
+</style>
+</head>
+<body>
+  <h3>Welcome To Kottayam</h3>
+  <bgcolor="pink"></bgcolor>
+
+
+  <a href="home.html"><button onclick="document.location='home.html'">Home</button>
+  </a>
+<div class="slideshow-container">
+
+<div class="mySlides">
+    <img src="images/illikkal-kall.jpg">
+    <p> Illikkal Mala comprises three hills<br>
+      each rising up to 3,400 ft above sea leve.<br>
+       Each of the hills has a peculiar shape.</p>
+</div>
+
+<div class="mySlides">
+  <img src="images/Kumarakom-Bird-Sanctuary.jpg">
+  <p>Kumarakom Bird Sanctuary (also known as Vembanad Bird Sanctuary) <br>
+    is situated at Kumarakom in Kottayam taluk of Kottayam district in <br>
+    the Indian state of Kerala </p>
+</div>
+<div class="mySlides"> 
+  <img src="images/malar.jpg">
+  <p> Malarikkal is a small tourism hamlet located in Thiruvarpu panchayat in Kottayam town of Kerala</p>
+</div>
+ 
+<div class="mySlides">
+  <img src="images/Marmala-Waterfalls.jpg">
+  <p> Marmala waterfall is about 40 meter in height<br>
+    plunging into a 12-meter deep pool and feeds the River Teekoy.</p>
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
