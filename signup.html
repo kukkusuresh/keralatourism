@@ -1,62 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <title>signup</title>
-  <style>
-form{
-  border: brown;
-  padding-top: 50px;
-  float: right;
-  box-sizing: border-box;
-border-radius: 5px;
-
-}
-input{
-  box-sizing: border-box;
-}
-
-  </style>
+    
+    <title>signup</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style1.css">
+    
 </head>
-<body>
-  
-   
- 
-  <body background="images/signup.jpg">
-  
-  </body>
-    <form action="#" class="sign">
-<h2>SignUp</h2>
-<br>
-<div class="sign-cont">
-  <label>Name</label>
-  <input type="text" placeholder="Name">
-</div>
-<div class="sign-cont">
-  <label>Username</label>
-  <input type="text" placeholder="Username">
-</div>
-<div class="sign-cont">
-  <label>Email</label>
-  <input type="email" placeholder="Email">
-</div>
-<div class="sign-cont">
-  <label>Password</label>
-  <input type="text" placeholder="Password">
-</div>
-<div id="sign-button">
-<button>Sign Up</button>
-</div>
-<div class="sign-misc">
-  <h6>Already a member? 
-  <a href="login.html">Login</a></h6>
-
-</div>
-    </form>
-   
-
+<body background-image= "images/tour6.jpg">
+    
+    <div class="container">
+        <div class="login">
+          <h2> Register Now</h2>
+         <br>
+         <form id="myform" action="home.html" onsubmit="return validate()">
+             <label><b>Name</b></label>
+             <br>
+             <input id="name" type="text" placeholder="First Name">
+             <br>
+             <br>
+             <label><b>Email</b></label>
+             <br>
+            <input id="email" type="email" placeholder="Enter your email">
+            <br>
+            <br>
+            <label><b>Phone Number</b></label>
+            <br>
+            <input id="phone" type="text" placeholder="Enter your Phone Number">
+    
+            <br>
+            <br>
+<label><b>Password</b></label>
+            <br>
+            <input id="psw" type="password" placeholder="Set a password">
+            <br>
+            <br>
+                <button id="submit">SignUp</button>
+                <br>
+               <h4>Already a member?<a href="login.html">Login here</a>
+               </h4>
+        
+            </form>
+        </div>
+    </div>
+    <script src="form.js">  </script>
+        
 </body>
 </html>
