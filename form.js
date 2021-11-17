@@ -32,7 +32,7 @@ let phone=document.getElementById("phone");
     
        var t=re.exec(phone.value);
        if(!t){
-           alert("phonenumber not valid");
+           alert("please fill the form");
            return false;
 
        }
