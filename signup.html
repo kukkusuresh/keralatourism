@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <title>signup</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -9,36 +8,54 @@
     <link rel="stylesheet" href="Style1.css">
     
 </head>
-<body background-image= "images/tour6.jpg">
-    <a href="index.html"><button onclick="document.location='index.html'">Home</button>
-    </a>
+<body background-image= "images/tourwallimg.jpg">
+    <div class="topnav">
+        KERALA TOURISM
+        
+        <div class="topnav-right">
+            
+            <a class="active" href="index.html">Home</a>
+        <a href="signup.html">SignUp</a>
+        <a href="login.html">Login</a>
+          <a href="home.html">Explore</a>
+          <a href="#about">Aboutus</a>
+        </div>
+      </div>
+     
+    <!--<a href="index.html"><button onclick="document.location='index.html'">Home</button>
+    </a>-->
     
     
     <div class="container">
         <div class="login">
           <h2> Register Now</h2>
          <br>
-         <form id="myform" action="home.html" onsubmit="return validate()">
-             <label><b>Name</b></label>
+         <form action="home.html" onsubmit="return validate()" id="myform">
+           <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>                                                              
+           --> <label><b>Name</b></label>
              <br>
-             <input id="name" type="text" placeholder="First Name">
+             <input id="name" type="text" placeholder="Enter your Name" >
+             
              <br>
              <br>
              <label><b>Email</b></label>
              <br>
             <input id="email" type="email" placeholder="Enter your email">
+            <span id="eerror"></span>
             <br>
             <br>
             <label><b>Phone Number</b></label>
             <br>
-            <input id="phone" type="text" placeholder="Enter your Phone Number">
-    
+            <input id="mobile" type="text" placeholder="Enter your Phone Number">
+            <span id="merror"></span>
             <br>
             <br>
-<label><b>Password</b></label>
+            <label><b>Password</b></label>
             <br>
             <input id="psw" type="password" placeholder="Set a password">
+            <span id="perror"></span>
             <br>
+            <span id="strength"></span>
             <br>
                 <button id="submit">SignUp</button>
                 <br>
@@ -49,6 +66,5 @@
         </div>
     </div>
     <script src="form.js">  </script>
-        
-</body>
+   </body>
 </html>
