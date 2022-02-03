@@ -11,9 +11,8 @@ body{
 .header #container
 {
     height: 100%;
-    width: 100%;
-    background-image: image(url(images/tour6.jpg));
-    
+    background-image: image(url(image/banner11.jpg));
+    background-position:center ;
     background-attachment: fixed ;
     background-size: cover ;
     background-repeat: no-repeat ;
@@ -36,16 +35,7 @@ text-shadow: springgreen;
     color: rgb(6, 75, 11);
 }
 
-button{
-    
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+
 
 
 
